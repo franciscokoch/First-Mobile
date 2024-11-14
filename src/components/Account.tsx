@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { User } from "../@types/user";
+import { IUser } from "../@types/user";
 
 export const Account = () => {
-    const [user, setUser] = useState<User>({} as User)
+    const [user, setUser] = useState<IUser>({
+        name: "Chico",
+        age: 19,
+        city: "Lajeado"
+    } as IUser)
+
+    useEffect(() => {
+        console.log('IDADE NOVA =>', user.age)
+    }, [user.age]);
+
     return (
         <SafeAreaView style={styles.container}>
             <Text style={styles.text}>Account Information</Text>
