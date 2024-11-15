@@ -1,8 +1,13 @@
+import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { Alert, Button, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Account } from './Account';
 
 export default function Contador() {
+
+  const navigator = useNavigation();
+
   const [count, setCount] = useState<number>(0);
   return (
     <SafeAreaView style={styles.container}>
@@ -13,6 +18,12 @@ export default function Contador() {
         onPress={() => setCount(count + 1)}
         >
           <Text style={styles.buttonText}>Click</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+        style={styles.button}
+        onPress={() => {navigator.navigate(Account)}}
+        >
+          <Text style={styles.buttonText}>Ir para conta</Text>
         </TouchableOpacity>
         <StatusBar style="auto"/>
       </View>
@@ -28,30 +39,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     paddingVertical: 20,
-    paddingBottom: 40,
+    paddingBottom: 40
   },
   text: {
     fontSize: 50,
     fontWeight: 'bold',
-    color: '#ff0000',
+    color: '#000',
     marginBottom: 20,
-    textAlign: 'center',
-    textShadowColor: '#000000',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5
+    textAlign: 'center'
   },
   button: {
-    backgroundColor: '#ff0000',
+    backgroundColor: '#0080ff',
     padding: 10,
     borderRadius: 5,
     marginBottom: 10,
     width: 200,
-    alignSelf: 'center',
+    alignSelf: 'center'
   },
   buttonText: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
-    textAlign: 'center',
+    textAlign: 'center'
   }
 });
