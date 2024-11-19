@@ -7,33 +7,43 @@ import { Account } from "./Account";
 import Contador from "./Contador";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { theme } from "../../themes/theme";
+import { ToDoList } from "./ToDoList";
 
 export default function Home() {
 
-    const navigator = useNavigation();
+    const navigator = useNavigation<NavigationProps>();
   
     return (
-      <SafeAreaView style={styles.container}>
-        <View>
-          <Text style={styles.text}>
-            <FontAwesome6 name="house" size={40} color="black"/>
-            Home
-            </Text>
+      <SafeAreaView style={theme.container}>
+        <Text style={styles.text}>
+          <FontAwesome6 name="house" size={40} color="black"/>
+        </Text>
+        <View style={theme.flex}>
+
           <TouchableOpacity
-          style={styles.button}
+          style={theme.button}
           onPress={() => {navigator.navigate(Account)}}
           >
             <Text style={styles.buttonText}>
-              <FontAwesome name="birthday-cake" size={24} color="white" />
                 Ir para conta
               </Text>
           </TouchableOpacity>
+
           <TouchableOpacity
           style={styles.button}
           onPress={() => {navigator.navigate(Contador)}}
           >
             <Text style={styles.buttonText}>Ir para contador</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+          style={styles.button}
+          onPress={() => {navigator.navigate(ToDoList)}}
+          >
+            <Text style={styles.buttonText}>Ir para lista</Text>
+          </TouchableOpacity>
+
           <StatusBar style="auto"/>
         </View>
       </SafeAreaView>
