@@ -8,7 +8,7 @@ import Contador from "./Contador";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { theme } from "../../themes/theme";
-import { ToDoList } from "./ToDoList";
+import { ToDoList } from "./Todolist";
 
 export default function Home() {
 

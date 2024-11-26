@@ -2,9 +2,13 @@ import { StyleSheet } from "react-native";
 
 export const colors = {
     blue: '#0080ff',
+    blueLight: '#00ABFF',
     gray: '#333',
     white: '#fff',
-    black: '#000'
+    black: '#000',
+    placeHolder: '#90A4AE',
+    red: '#FF0000',
+    green: '#00FF00'
 }
 
 export const theme = StyleSheet.create ({
@@ -67,13 +71,35 @@ export const theme = StyleSheet.create ({
         paddingVertical: 10,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: colors.gray,
+        borderColor: colors.blue,
+        backgroundColor: colors.blueLight,
+        opacity: 0.5,
         width: '80%',
         fontSize: 16,
         letterSpacing: -0.2
     },
     listItem: {
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.blue
+    },
+    list: {
+        marginBottom: 20,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: colors.gray,
+        backgroundColor: colors.white,
+        width: '100%'
+    },
+    textTask: {
         fontSize: 16,
-        marginBottom: 8
+        fontWeight: 'bold',
+        color: colors.gray,
+        letterSpacing: -0.2
     }
 })

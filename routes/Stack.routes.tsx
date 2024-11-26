@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../src/screen/Home';
 import Contador from '../src/screen/Contador';
 import { Account } from '../src/screen/Account';
-import { ToDoList } from '../src/screen/ToDoList';
+import { ToDoList } from '../src/screen/Todolist';
 
 const Stack = createNativeStackNavigator();
 
