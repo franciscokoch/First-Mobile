@@ -1,7 +1,8 @@
-type RootStackParamsList = {
+type RootStackParamList = {
+    Login: undefined;
     Account: undefined;
-    Home: undefined;
     Contador: undefined;
-}
+    Home: undefined;
+};
 
-type NavigationProps = NavigationProps<RootStackParamsList>;
+export type NavigationProps = NavigationProp<RootStackParamList>;

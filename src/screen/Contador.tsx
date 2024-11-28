@@ -19,12 +19,6 @@ export default function Contador() {
         >
           <Text style={styles.buttonText}>Click</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-        style={styles.button}
-        onPress={() => {navigator.navigate(Account)}}
-        >
-          <Text style={styles.buttonText}>Ir para conta</Text>
-        </TouchableOpacity>
         <StatusBar style="auto"/>
       </View>
     </SafeAreaView>

@@ -101,5 +101,11 @@ export const theme = StyleSheet.create ({
         fontWeight: 'bold',
         color: colors.gray,
         letterSpacing: -0.2
+    },
+    marginTop: {
+        marginTop: 20
+    },
+    marginBottom: {
+        marginBottom: 20
     }
 })

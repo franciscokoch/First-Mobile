@@ -9,6 +9,8 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { theme } from "../../themes/theme";
 import { ToDoList } from "./Todolist";
+import { NavigationProps } from "../@types/navigation";
+import { Cep } from "./Cep";
 
 export default function Home() {
 
@@ -42,6 +44,13 @@ export default function Home() {
           onPress={() => {navigator.navigate(ToDoList)}}
           >
             <Text style={styles.buttonText}>Ir para lista</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+          style={styles.button}
+          onPress={() => {navigator.navigate(Cep)}}
+          >
+            <Text style={styles.buttonText}>Ir para CEP</Text>
           </TouchableOpacity>
 
           <StatusBar style="auto"/>
